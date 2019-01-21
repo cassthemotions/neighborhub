@@ -1,0 +1,14 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "ISC",
+  "scripts": {
+    "test-sendMessage": "serverless invoke local -f sendMessage -p ./mocks/sendMessage.json",
+    "deploy": "serverless deploy --aws-profile nh"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.383.0",
+    "uuid": "^3.3.2"
+  }
+}

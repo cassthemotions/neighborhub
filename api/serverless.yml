@@ -1,0 +1,46 @@
+service: neighborhub
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  region: us-west-2
+  stage: dev
+
+functions:
+  sendMessage:
+    handler: src/sendMessage.handler
+    events:
+      - http:
+          integration: lambda
+          path: neighborhub/sendMessage
+          method: post
+  # take:
+  #   handler: src/take.handler
+  #   events:
+  #     - http:
+  #         integration: lambda
+  #         path: cross-swaps/take
+  #         method: post
+  # get:
+  #   handler: src/get.handler
+  #   events:
+  #     - http:
+  #         integration: lambda
+  #         path: cross-swaps/get/{id}
+  #         method: get
+  #         request:
+  #           parameters:
+  #             paths:
+  #               id: true
+
+  # getBalance:
+  #   handler: src/getBalance.handler
+  #   events:
+  #     - http:
+  #         integration: lambda
+  #         path: cross-swaps/getBalance/{id}
+  #         method: get
+  #         request:
+  #           parameters:
+  #             paths:
+  #               id: true             
