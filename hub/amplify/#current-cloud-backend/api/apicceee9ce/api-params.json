@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/messages",
+            "lambdaFunction": "hubce612ed1",
+            "privacy": {
+                "private": true,
+                "auth": "rw"
+            }
+        }
+    ],
+    "resourceName": "apicceee9ce",
+    "apiName": "hubcceee9ce",
+    "functionArns": [
+        {
+            "lambdaFunction": "hubce612ed1"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 0,
+        "authRoleName": "hub-20190121171608-authRole",
+        "unAuthRoleName": "hub-20190121171608-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "hubce612ed1",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

@@ -1,6 +1,0 @@
-1- add unstaged changes: `git add .`
-2- commit changes: `git commit -m "your commit message"`
-3- push changes: `git push origin master`
-
-create branch: `git checkout -b branchName` no -b if branch already exists
-push branch: git push origin branchName
